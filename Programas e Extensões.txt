@@ -1,0 +1,22 @@
+Externsões do VS Code:
+
+Auto Rename Tag - Renomeia inicio e fim da tag junto
+Bracket Pair Colorize 2 - Defini cores diferentes para os parentezes, colchetes e chaves
+C/C++
+C/C++ Compile Run
+C++ Intelissense
+Python
+Draw.Io
+PHP
+PHP Debug
+Live Server
+PHP Extension Pack
+PHP Inteliphense
+VSCode-Icons
+Code Runner - Copiler Node.js
+React Native Tools
+
+Prograns:
+Xampp
+VS Code
+Git
