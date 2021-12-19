@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+
+nav{
+    background-color: rgb(87, 87, 87);
+    height: 80px;
+    width: 100%;
+}
+
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a{
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    text-transform: uppercase;
+    border-radius: 3px;
+}
+
+a.active, a:hover{
+    background-color: rgb(95, 95, 95);
+    transition: .5s;
+}
+
+.botao{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+@media(max-width: 952px){
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+
+@media(max-width:858px){
+    .botao{
+        display: block;
+    }
+
+    ul{
+        position: fixed;
+		width: 100%;
+		height: 100vh;
+		background: #000000;
+		top: 80px;
+		left: -100%;
+		text-align: center;
+		transition: all .5s;
+    }
+
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a{
+        font-size: 20px;
+    }
+
+    a:active, a:hover{
+        background: none;
+        color: grey;
+    }
+
+    #check:checked ~ ul{
+        left: 0;
+        display: block;
+        transition: .5s;
+    }
+}
