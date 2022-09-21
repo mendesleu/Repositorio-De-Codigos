@@ -7,10 +7,7 @@ C/C++ Compile Run
 C++ Intelissense
 Python
 Draw.Io
-PHP
-PHP Debug
 Live Server
-PHP Extension Pack
 PHP Inteliphense
 VSCode-Icons
 Code Runner - Copiler Node.js
