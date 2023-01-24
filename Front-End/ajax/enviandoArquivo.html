@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-s cale=1.0">
+    <title>Document</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+</head>
+
+<body>
+    <form action="#" id="formulario" method="post" enctype="multipart/form-data" onsubmit="return testeAjax()">
+    <input type="text">
+        <input type="file" name="arq" id="arq">
+        <button>enviar</button>
+    </form>
+</body>
+
+</html>
+
+<script>
+    function testeAjax() {
+        let data = document.getElementById('formulario');
+        let formData = new FormData(data);
+
+        $.ajax({
+            url: 'teste.php',
+            method: 'post',
+            dataType: 'json',
+            cache: false,
+            contentType: false,
+            processData: false,
+            data: formData
+        }).done((result) => {
+            console.log(result);
+        })
+
+        return false;
+    }
+</script>
