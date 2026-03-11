@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="file" id="imagens" multiple accept="image/*">
+    <div id="preview"></div>
+
+    <script>
+        const input = document.getElementById('imagens');
+        const preview = document.getElementById('preview');
+
+        input.addEventListener('change', function () {
+            preview.innerHTML = '';
+
+            [...this.files].forEach(file => {
+                if (!file.type.startsWith('image/')) return;
+
+                const img = document.createElement('img');
+                img.src = URL.createObjectURL(file);
+                img.style.width = '120px';
+                img.style.margin = '5px';
+
+                preview.appendChild(img);
+            });
+        });
+        
+        
+        // 
+        // 
+        // Adicina dentro do addEventListener para limitar o upload
+        const MAX = 5;
+
+        input.addEventListener('change', function () {
+
+            if (this.files.length > MAX) {
+                alert('Máximo de 5 imagens');
+                this.value = '';
+                return;
+            }
+
+        });
+
+
+        // 
+        // 
+        // Adiciona dentro do addEventListener para checar os tamanhos
+        if (file.size > 5 * 1024 * 1024) {
+            alert('Imagem maior que 5MB');
+            return;
+        }
+    </script>
+</body>
+
+</html>
